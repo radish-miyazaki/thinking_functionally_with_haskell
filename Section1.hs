@@ -75,4 +75,5 @@ showRun :: (Int, String) -> String
 showRun (n, x) = x ++ ": " ++ show n ++ "\n"
 
 commonWords :: Int -> String -> String
-commonWords n = concatMap showRun . take n . sortRuns . countRuns . sortWords . words . map toLower
+commonWords n = concatMap showRun . take n . sortRuns . countRuns .
+        sortWords . words . map toLower
