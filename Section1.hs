@@ -1,3 +1,5 @@
+module Section1(convert) where
+
 units, teens, tens :: [String]
 units = [ "zero", "one", "two", "three", "four", "five"
         , "six", "seven", "eight", "nine"
