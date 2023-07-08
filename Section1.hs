@@ -1,4 +1,4 @@
-module Section1(convert, commonWords) where
+module Section1 (convert, commonWords) where
 
 import Data.List (group, sortBy, sort)
 import Data.Char (toLower)

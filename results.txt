@@ -1,0 +1,5 @@
+the: 6
+lorem: 4
+of: 4
+and: 3
+ipsum: 3
