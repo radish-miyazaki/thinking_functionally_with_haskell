@@ -1,4 +1,4 @@
-import Section1 (commonWords)
+import CommonWords (commonWords)
 
 main :: IO ()
 main = do { putStrLn "Take text from where:"
