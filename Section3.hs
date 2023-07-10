@@ -35,3 +35,33 @@ lower x = until (`leq` x) (* 2) (-1)
 
 upper :: Float -> Integer
 upper x = until (x `lt`) (* 2) 1
+
+data Nat = Zero | Succ Nat
+  deriving (Eq, Ord, Show)
+
+-- strict version
+-- data Nat = Zero | Succ !Nat
+--   deriving (Eq, Ord, Show)
+
+instance Num Nat where
+  m + Zero = m
+  m + Succ n = Succ (m + n)
+
+  m * Zero = Zero
+  m * (Succ n) = m * n + m
+
+  abs n = n
+
+  signum Zero = Zero
+  signum (Succ n) = Succ Zero
+
+  m - Zero = m
+  Zero - Succ n = Zero
+  Succ m - Succ n = m - n
+
+  fromInteger n
+    | n <= 0 = Zero
+    | otherwise = Succ (fromInteger (n - 1))
+
+infinity :: Nat
+infinity = Succ infinity
